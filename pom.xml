@@ -23,13 +23,20 @@
 	<groupId>org.energy-home</groupId>
 	<artifactId>jemma.osgi.ah.upnp.energyathome</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>Hac Upnp Adapter</name>
 
 
 	<properties>
+	
+		<!-- External dependencies version properties -->
+		<org.osgi.compendium.version>4.2.0</org.osgi.compendium.version>
+		<org.osgi.core.version>4.2.0</org.osgi.core.version>		
+		<org.slf4j.version>1.6.2</org.slf4j.version>
+		
+		<!-- Maven plugin version properties -->
 		<felix.bundle.plugin.version>2.5.3</felix.bundle.plugin.version>
-		<org.slf4j.version>1.7.7</org.slf4j.version>
+		
 	</properties>
 
 	<build>
@@ -86,17 +93,19 @@
 
 	
 	<dependencies>
+	
+		<!-- External dependencies -->
 
 		<dependency>
 			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.2.0</version>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>${org.osgi.compendium.version}</version>
 			<scope>compile</scope>
-		</dependency>
+		</dependency>		
 		<dependency>
 			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>4.2.0</version>
+			<artifactId>org.osgi.core</artifactId>
+			<version>${org.osgi.core.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -105,17 +114,7 @@
 			<version>${org.slf4j.version}</version>
 			<scope>compile</scope>
 		</dependency> 
-		<!--
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>${org.eclipse.osgi.version}</version>
-		</dependency>		    
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi.services</artifactId>
-			<version>${org.eclipse.osgi.services.version}</version>
-		</dependency>  -->
+
 	</dependencies>
 	
 </project>
