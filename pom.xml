@@ -23,7 +23,7 @@
 	<groupId>org.energy-home</groupId>
 	<artifactId>jemma.osgi.ah.upnp.energyathome</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>Hac Upnp Adapter</name>
 
 
@@ -72,6 +72,7 @@
 						<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
 						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>org.osgi.framework,
 							 org.osgi.service.device,
 							 org.osgi.service.upnp
@@ -79,7 +80,7 @@
 						<Export-Package>!*</Export-Package>
 						<Service-Component>OSGI-INF/hac_upnp.xml</Service-Component>
 						<Bundle-Vendor>Telecom Italia</Bundle-Vendor>
-						<Bundle-Category>Automation@Home</Bundle-Category>
+						<Bundle-Category>JEMMA Automation@Home</Bundle-Category>
 						<Bundle-RequiredExecutionEnvironment>OSGi/Minimum-1.2,
 							 CDC-1.1/Foundation-1.1,
 							 J2SE-1.4
@@ -88,6 +89,15 @@
 					</instructions>
 				</configuration>
 			</plugin>
+			<!-- to launch: mvn java-formatter:format -->
+			<plugin>
+				<groupId>com.googlecode.maven-java-formatter-plugin</groupId>
+				<artifactId>maven-java-formatter-plugin</artifactId>
+				<version>0.4</version>
+				<configuration>
+					<configFile>${project.basedir}/src/main/resources/formatter.xml</configFile>
+				</configuration>
+			</plugin>			
 		</plugins>
 	</build>
 
