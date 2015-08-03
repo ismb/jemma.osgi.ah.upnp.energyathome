@@ -29,7 +29,6 @@ public final class Icon implements UPnPIcon {
 
 	private String type;
 
-
 	/**
 	 * Constructs a new <code>Icon</code> object. The image content is not
 	 * downloaded on construction of the object but on demand (it's downloaded
