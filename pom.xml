@@ -80,7 +80,7 @@
 							 org.osgi.service.upnp
 						</Import-Package>
 						<Export-Package>!*</Export-Package>
-						<Service-Component>OSGI-INF/hac_upnp.xml</Service-Component>
+						<Service-Component>OSGI-INF/*.xml</Service-Component>
 						<Bundle-Vendor>Telecom Italia</Bundle-Vendor>
 						<Bundle-Category>JEMMA Automation@Home</Bundle-Category>
 						<Bundle-RequiredExecutionEnvironment>OSGi/Minimum-1.2,
